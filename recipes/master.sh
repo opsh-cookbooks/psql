@@ -1,9 +1,12 @@
 repl_passwd="53e86ccf52925c77fa9ac9afc05b5a4e"
 export repl_user="repl_user"
 
+#create user, show users
 su - postgres <<EOF
 psql -c "create user repl_user replication login encrypted password '$repl_passwd'"
+psql -c '\du'
 EOF
+
 
 echo -n "please enter slave address: "
 read address

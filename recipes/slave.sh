@@ -31,6 +31,8 @@ echo
 [ -d "/opt/psql/archive" ] || mkdir -p /opt/psql/archive/ 
 
 
-template "recovery.conf" /etc/postgresql/9.3/main/recovery.conf
+#!important: recovery.conf in directory /var/lib/postgresql/9.3/main/
+template "recovery.conf" /var/lib/postgresql/9.3/main/recovery.conf
+
 template "slave-hba.conf" /etc/postgresql/9.3/main/pg_hba.conf
 template "slave-psql.conf" /etc/postgresql/9.3/main/postgresql.conf
