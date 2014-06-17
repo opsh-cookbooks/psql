@@ -1,3 +1,5 @@
+#use psql-sh to-slave
+
 repl_passwd="53e86ccf52925c77fa9ac9afc05b5a4e"
 export repl_user="repl_user"
 
